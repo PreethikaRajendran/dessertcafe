@@ -1,0 +1,18 @@
+.top{
+  display: flex;
+  flex-wrap: wrap;  
+  background-color: bisque;
+  /* border: 1px solid black; */
+}
+.top img{
+    width: 50%;
+    border-radius: 3%;
+}
+.bottom{
+    background-color: bisque;
+    padding: 3%;
+}
+.bottom img{
+    width: 47%;
+    border-radius: 50%;
+}

@@ -1,0 +1,423 @@
+.nav {
+    color: #fff;
+    position: absolute;
+    z-index: 2;
+
+    border: none;
+    /* border: 1px solid black; */
+}
+
+
+#burger-menu {
+    cursor: pointer;
+    height: 27px;
+    width: 27px;
+    margin: 15px;
+    overflow: visible;
+    position: relative;
+    z-index: 2;
+    /* border: 1px solid black;
+     */
+}
+
+#burger-menu span,
+#burger-menu span:before,
+#burger-menu span:after {
+    background: black;
+    display: block;
+    height: 2px;
+    opacity: 1;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+
+}
+
+#burger-menu span:before,
+#burger-menu span:after {
+    content: "";
+}
+
+#burger-menu span:before {
+    left: 0px;
+    top: -10px;
+    width: 27px;
+
+}
+
+#burger-menu span {
+    right: 0px;
+    top: 13px;
+    width: 27px;
+}
+
+#burger-menu span:after {
+    left: 0px;
+    top: 10px;
+    width: 27px;
+}
+
+#burger-menu.close span:before {
+    top: 0px;
+    transform: rotate(90deg);
+    width: 27px;
+}
+
+#burger-menu.close span {
+    transform: rotate(-45deg);
+    top: 13px;
+    width: 27px;
+}
+
+#burger-menu.close span:after {
+    top: 0px;
+    left: 0;
+    transform: rotate(90deg);
+    opacity: 0;
+    width: 0;
+}
+
+#menu {
+    z-index: 1;
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    padding-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+#menu.overlay {
+    visibility: visible;
+    opacity: 1;
+    padding-top: 100px;
+    background: rgba(0, 0, 0, 0.85);
+}
+
+#menu ul {
+    padding: 0;
+}
+
+#menu li {
+    list-style: none;
+}
+
+#menu a {
+    color: #fff;
+    display: block;
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-decoration: none;
+}
+
+/*slide*/
+.slider {
+    width: 1770px;
+    max-width: 100vw;
+    height: 650px;
+    margin: auto;
+    position: relative;
+    /* overflow:visible; */
+    /* border: 1px solid green; */
+
+
+}
+
+.slider .list {
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s;
+    /* border: 1px solid rgb(139, 18, 93); */
+
+}
+
+
+.slider .list .text {
+    border: 1px solid black;
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+
+.slider .list img {
+    /* border:1px solid rgb(84, 19, 187); */
+    width: 1770px;
+    max-width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+
+
+}
+
+.slider .buttons {
+    position: absolute;
+    top: 60%;
+    left: 35%;
+    width: 90%;
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.slider .buttons #topbtn {
+    display: block;
+}
+
+.slider .buttons button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff5;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.slider .dots {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.slider .dots li {
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.slider .dots li.active {
+    width: 30px;
+}
+
+button {
+
+    border: none;
+    background: transparent;
+    z-index: 3;
+    display: none;
+}
+
+
+/* content */
+h2 {
+    text-align: center;
+    margin-bottom: 5rem;
+    font-size: 4rem;
+}
+
+.all-products {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product {
+    overflow: hidden;
+    background: #ffffff;
+    color: #21201e;
+    text-align: center;
+    width: 240px;
+    height: 400px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.2rem;
+    margin: 2rem;
+}
+
+.product .product-title,
+.product .product-price {
+    font-size: 18px;
+}
+
+.product:hover img {
+    scale: 1.1;
+    border-radius: 20%;
+}
+
+.product:hover {
+    box-shadow: 5px 15px 25px rgb(197, 196, 196);
+}
+
+.product img {
+    height: 200px;
+    width: 160px;
+    margin: 1rem;
+    transition: all 0.3s;
+}
+
+.product a:link,
+.product a:visited {
+    color: #ececec;
+    display: inline-block;
+    text-decoration: none;
+    background-color: black;
+    padding: 1.2rem 3rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.product a:hover {
+    transform: scale(1.2);
+}
+
+/* brand */
+
+
+.preparation {
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    transition: all 0.2s;
+
+    /* border: 1px solid black; */
+
+}
+
+.preparation2 {
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    /* border: 1px solid black; */
+
+}
+
+.preparation .leaf {
+    /* border: 10px solid red; */
+    align-items: center;
+
+
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.order {
+
+    background-color: black;
+    text-align: center;
+    color: #fff;
+    padding: 3%;
+    opacity: 0.6;
+}
+
+.img {
+    transition: all 0.3s;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    padding: 5%;
+    width: 100%;
+    /* border: 1px solid black; */
+}
+
+.img :hover {
+    transform: scale(1.2);
+}
+
+.final {
+    padding: 3%;
+    /* border: 1px solid black; */
+    /* width: 40%; */
+    position: absolute;
+    right: 35%;
+    transition: all 0.5 s;
+  
+
+
+}
+
+.final img:hover {
+    animation: rotation 6s infinite linear;
+}
+.logo {
+    /* border: 1px solid black; */
+ position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    width: 190px;
+    right: 25%;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .nav {
+        margin-right: 7%;
+        justify-content: center;
+        /* border: 1px solid black; */
+
+        transition: all none;
+    }
+
+    .slider {
+        height: 400px;
+        justify-content: center;
+    }
+
+    .slider .buttons {
+        left: 20%;
+
+    }
+
+    .slider #img {
+        width: max-content;
+    }
+
+    .product h2 {
+        align-items: center;
+    }
+
+    .buttons .text {
+        right: 20%;
+    }
+}
